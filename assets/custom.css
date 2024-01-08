@@ -1,0 +1,35 @@
+/* Global */
+body {
+    background-color: white;
+}
+
+/* Service section */
+.service:hover .arrow {
+    transform: translateX(5px);
+}
+
+.arrow {
+    transition: .2s;
+}
+
+/* Responsive fixes ( Services section ) */
+@media screen and (min-width: 641px) {
+
+    .fixedAtMedia-2,
+    .fixedAtMedia-3 {
+        border-top: transparent !important;
+    }
+
+    .fixedAtMedia-4 {
+        border-left: transparent !important;
+    }
+}
+@media screen and (max-width: 640px) {
+    .fixedAtMedia-2,
+    .fixedAtMedia-3,
+    .fixedAtMedia-4,
+    .fixedAtMedia-5,
+    .fixedAtMedia-6 {
+        border-left: transparent !important;
+    }
+}

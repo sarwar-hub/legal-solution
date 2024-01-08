@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Site title -->
+  <title>Legal Solution</title>
+  <!-- Site icon -->
+  <link rel="shortcut icon" href="images/business.png" type="image/x-icon">
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Tailwind and daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.47.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/custom.css">
+  <!-- Custom config of Tailwind CSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#B68C5A',
+            primaryh: '#ae7835',
+            dark: '#414040',
+            gray2: '#707070',
+          },
+          fontFamily: {
+            eb: ['EB Garamond', 'serif'],
+            pop: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <!------------------------------------->
+</head>
+
+<body>
+  <!-- header open -->
+  <header class="md:mx-[10%]">
+    <!-- Navigation bar -->
+    <div class="navbar bg-white py-5">
+      <div class="navbar-start">
+        <!-- Collaps menu -->
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <!-- Collaps menu items -->
+            <li><a class="font-pop text-base text-gray2">Home</a></li>
+            <li><a class="font-pop text-base text-gray2">Services</a></li>
+            <li><a class="font-pop text-base text-gray2">Cases</a></li>
+            <li><a class="font-pop text-base text-gray2">Blog</a></li>
+            <li><a class="font-pop text-base text-gray2">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Logo -->
+        <a class="normal-case text-xl"><img src="images/logo2.png" alt=""></a>
+      </div>
+      <!-- Desktop menu -->
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <!-- Desktop menu items -->
+          <li><a class="font-pop text-base text-gray2">Home</a></li>
+          <li><a class="inline font-pop text-base text-gray2 hover: duration-100">Services <i class="fa-solid fa-chevron-right"></i></a></li>
+          <li><a class="inline font-pop text-base text-gray2 hover: duration-100">Cases <i class="fa-solid fa-chevron-right"></i></a></li>
+          <li><a class="inline font-pop text-base text-gray2 hover: duration-100">Blog <i class="fa-solid fa-chevron-right" ></i></a></li>
+          <li><a class="inline font-pop text-base text-gray2 hover: duration-100">Contact <i class="fa-solid fa-chevron-right"></i></a></li>
+        </ul>
+      </div>
+      <!-- Right side Button -->
+      <div class="navbar-end">
+        <!-- Button -->
+        <label for="my-modal-3" class="text-white font-pop py-3 px-4 bg-primary rounded-lg hover:bg-primaryh">Fee Consultation</label>
+        <!-- Dialogue box -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box bg-dark relative">
+            <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2 text-red-600">✕</label>
+            <h3 class="text-lg font-bold text-white">Warning...!!</h3>
+            <p class="py-4 text-white">You have to SignUp first</p>
+            <a class="text-white font-pop py-2 px-3 mt-10 bg-primary rounded-lg hover:bg-primaryh" href="#">SignUp</a>
+          </div>
+        </div>
+      </div>
+    <!-- Nav end -->
+    </div>
+
+    <!-- Banner -->
+    <div class="banner relative bg-black rounded-lg">
+      <!-- Banner image -->
+      <img class="object-cover w-screen md:h-auto h-[60vh] opacity-50" src="images/banner.png" alt="">
+      <div class="overlay w-full h-full"></div>
+      <!-- Banner text -->
+      <div class="absolute md:top-[20%] top-[15%] left-auto w-full text-center flex-row md:space-y-7 space-y-2">
+        <h1 class="md:text-7xl text-5xl text-white font-bold font-eb">We Provide Effective <br> Legal Solutions</h1>
+        <p class="md:text-base text-xs text-gray-200 font-pop md:w-3/5 md:mx-auto">We are providing you a complete solution and justice that you deserve. Don't be worried, you will be safe and confident with us. If you are interested, you can do a free consultation with us.</p>
+        <!-- Banner input -->
+        <div class="input bg-transparent">
+          <input class="inline font-pop py-3 px-4 mr-5 rounded-lg w-96 outline-none md:mb-0 mb-5 bg-white" type="search" name="" id="" placeholder="Type your service">
+          <button class="text-xl text-white font-pop py-3 px-7 bg-primary rounded-lg hover:bg-primaryh duration-100" type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header closed -->
+
+  <!-- Services open -->
+  <main class="md:mx-[10%] md:px-0 px-5">
+    <!-- All service -->
+    <section class="text-center md:my-24 my-10">
+      <h1 class="text-4xl text-dark font-eb font-bold">Legal Services</h1>
+      <p class="text-base text-gray2 font-pop md:my-10 my-5 md:w-3/5 mx-auto">We give you 100% ensurity of legal services, chooce your service type and reach to us and get a complete solution of your problem.</p>
+      <!-- Grid main -->
+      <div class="services grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 divide-x divide-y">
+        <!-- Service -->
+        <div class="service fixedAtMedia-1 flex-row space-y-4 text-center px-16 py-10 bg-gradient-to-b from-transparent to-tranceparent hover:from-zinc-100 hover:to-gray2-500">
+          <img class="mx-auto" src="images/business.png" alt="">
+          <h2 class="text-2xl text-dark font-eb font-bold">Business Law</h2>
+          <p class="text-sm text-gray2 font-pop">We are providing business type problems solution. Your business is very important to you and you can't want to hamper of it. If you feel some issues, You can reach us.</p>
+          <img class="mx-auto arrow" src="images/Frame.png" alt="">
+        </div>
+        <div class="service fixedAtMedia-2 flex-row space-y-4 text-center px-16 py-10 bg-gradient-to-b from-transparent to-tranceparent hover:from-zinc-100 hover:to-gray2-500 border-t-0">
+          <img class="mx-auto" src="images/criminal.png" alt="">
+          <h2 class="text-2xl text-dark font-eb font-bold">Criminal Law</h2>
+          <p class="text-sm text-gray2 font-pop">Country is full with many types of criminals. We are working hard to protect people from these criminals. Its very important to stay safe from criminals.</p>
+          <img class="mx-auto arrow" src="images/Frame.png" alt="">
+        </div>
+        <div class="service fixedAtMedia-3 flex-row space-y-4 text-center px-16 py-10 bg-gradient-to-b from-transparent to-tranceparent hover:from-zinc-100 hover:to-gray2-500">
+          <img class="mx-auto" src="images/child.png" alt="">
+          <h2 class="text-2xl text-dark font-eb font-bold">Child Support</h2>
+          <p class="text-sm text-gray2 font-pop">Our childrens are future of us. We can't accept that our child be hampered. We want your childs best solution. If you need this type of solution, don't wait.</p>
+          <img class="mx-auto arrow" src="images/Frame.png" alt="">
+        </div>
+        <div class="service fixedAtMedia-4 flex-row space-y-4 text-center px-16 py-10 bg-gradient-to-b from-transparent to-tranceparent hover:from-zinc-100 hover:to-gray2-500">
+          <img class="mx-auto" src="images/education.png" alt="">
+          <h2 class="text-2xl text-dark font-eb font-bold">Education Law</h2>
+          <p class="text-sm text-gray2 font-pop">Education law is a set of rules and regulations that guide the workings of an education system. Many regions have detailed educational law systems.</p>
+          <img class="mx-auto arrow" src="images/Frame.png" alt="">
+        </div>
+        <div class="service fixedAtMedia-5 flex-row space-y-4 text-center px-16 py-10 bg-gradient-to-b from-transparent to-tranceparent hover:from-zinc-100 hover:to-gray2-500">
+          <img class="mx-auto" src="images/divorce.png" alt="">
+          <h2 class="text-2xl text-dark font-eb font-bold">Devorce Law</h2>
+          <p class="text-sm text-gray2 font-pop">The divorce process is handled by family law attorneys and involves a number of issues, ranging from division of property to child custody.</p>
+          <img class="mx-auto arrow" src="images/Frame.png" alt="">
+        </div>
+        <div class="service fixedAtMedia-6 flex-row space-y-4 text-center px-16 py-10 bg-gradient-to-b from-transparent to-tranceparent hover:from-zinc-100 hover:to-gray2-500">
+          <img class="mx-auto" src="images/tax.png" alt="">
+          <h2 class="text-2xl text-dark font-eb font-bold">Tax Law</h2>
+          <p class="text-sm text-gray2 font-pop">tax law, body of rules under which a public authority has a claim on taxpayers, requiring them to transfer to the authority part of their income or property.</p>
+          <img class="mx-auto arrow" src="images/Frame.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- Services closed -->
+
+    <!-- Client open -->
+    <section class="text-center md:my-24 my-10">
+      <h1 class="text-4xl text-dark font-eb font-bold">What our Client Says</h1>
+      <p class="text-base text-gray2 font-pop md:my-10 my-5 md:w-3/5 mx-auto">Our clients are very satisfied with our works. Take a visit to what our client says.</p>
+      <!-- Carousel -->
+      <div class="carousel w-full rounded-lg">
+        <!-- Carousel items -->
+        <div id="slide1" class="carousel-item relative w-full bg-black">
+          <!-- Carousel background image -->
+          <img src="images/slider-1.jpg" class="w-full object-cover md:h-[75vh] h-[50vh] opacity-50" />
+          <!-- Carousel body -->
+          <div class="text text-center absolute w-full mx-auto mt-[10%] md:px-36 px-14">
+            <img class="w-20 mx-auto mb-5" src="images/person.png" alt="">
+            <h2 class="text-xl text-white font-eb">Mark Antonie</h2>
+            <span>UI/UX Designer</span>
+            <p class="md:text-base text-sm font-pop text-gray-100 mt-10">"Great experience overall having Matt Cadwell as my attorney. Matt understands his client, very insightful and is an expert in his field. Truly a professional and marvelous individual."</p>
+          </div>
+          <!-- Carousel navigation icon -->
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full bg-black">
+          <img src="images/slider-2.jpg" class="w-full object-cover md:h-[75vh] h-[50vh] opacity-50" />
+          <div class="text text-center absolute w-full mx-auto mt-[10%] md:px-36 px-14">
+            <img class="w-20 mx-auto mb-5" src="images/person.png" alt="">
+            <h2 class="text-xl text-white font-eb">Mark Antonie</h2>
+            <span>UI/UX Designer</span>
+            <p class="md:text-base text-sm font-pop text-gray-100 mt-10">"Great experience overall having Matt Cadwell as my attorney. Matt understands his client, very insightful and is an expert in his field. Truly a professional and marvelous individual."</p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full bg-black">
+          <img src="images/slider-3.jpg" class="w-full object-cover md:h-[75vh] h-[50vh] opacity-50" />
+          <div class="text text-center absolute w-full mx-auto mt-[10%] md:px-36 px-14">
+            <img class="w-20 mx-auto mb-5" src="images/person.png" alt="">
+            <h2 class="text-xl text-white font-eb">Mark Antonie</h2>
+            <span>UI/UX Designer</span>
+            <p class="md:text-base text-sm font-pop text-gray-100 mt-10">"Great experience overall having Matt Cadwell as my attorney. Matt understands his client, very insightful and is an expert in his field. Truly a professional and marvelous individual."</p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full bg-black">
+          <img src="images/slider-3.jpg" class="w-full object-cover md:h-[75vh] h-[50vh] opacity-50" />
+          <div class="text text-center absolute w-full mx-auto mt-[10%] md:px-36 px-14">
+            <img class="w-20 mx-auto mb-5" src="images/person.png" alt="">
+            <h2 class="text-xl text-white font-eb">Mark Antonie</h2>
+            <span>UI/UX Designer</span>
+            <p class="md:text-base text-sm font-pop text-gray-100 mt-10">"Great experience overall having Matt Cadwell as my attorney. Matt understands his client, very insightful and is an expert in his field. Truly a professional and marvelous individual."</p>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Client closed -->
+
+    <!-- FAQ open -->
+    <section class="md:my-24 my-10"> 
+      <h1 class="text-4xl text-dark font-eb font-bold text-center">Frequently Asked Questions</h1>
+      <p class="text-base text-gray2 font-pop md:my-10 my-5 md:w-3/5 mx-auto text-center">Some Questions that you'll faced, take a look about some Frequently asked Questions and there Answers.</p>
+      <!-- Section container -->
+      <div class="faq-section md:flex gap-x-5 justify-center items-center">
+        <!-- FAQs -->
+        <div class="faqs">
+          <div tabindex="0" class="collapse collapse-plus border bg-gray-100 rounded-lg mb-5">
+            <div class="collapse-title text-xl font-medium text-dark font-eb">
+              <!-- Question -->
+              1. What is Sementic tag in HTML?
+            </div>
+            <div class="collapse-content text-gray2 font-pop text-sm"> 
+              <!-- Answer -->
+              <p>An HTMl tag that clearly describes its meaning to both the browser and the developer. Examples of Semantic tags: <span class="text-red-400">&lt;form&gt;</span> and <span class="text-red-400">&lt;table&gt;</span>.</p>
+            </div>
+          </div>
+          <div tabindex="0" class="collapse collapse-plus border bg-gray-100 rounded-lg mb-5">
+            <div class="collapse-title text-xl font-medium text-dark font-eb">
+              2. What is CSS box model?
+            </div>
+            <div class="collapse-content text-gray2 font-pop text-sm"> 
+              <p>CSS box model is a box that wraps around every HTML element. It consists of margins, borders, padding, and the actual content.</p>
+            </div>
+          </div>
+          <div tabindex="0" class="collapse collapse-plus border bg-gray-100 rounded-lg mb-5">
+            <div class="collapse-title text-xl font-medium text-dark font-eb">
+              3. What is the purpose of Media Query?
+            </div>
+            <div class="collapse-content text-gray2 font-pop text-sm"> 
+              <p>We can define different styles and rules for different media types by Media Query.</p>
+            </div>
+          </div>
+          <div tabindex="0" class="collapse collapse-plus border bg-gray-100 rounded-lg mb-5">
+            <div class="collapse-title text-xl font-medium text-dark font-eb">
+              4. What is the basic difference between Flexbox and CSS Grid?
+            </div>
+            <div class="collapse-content text-gray2 font-pop text-sm"> 
+              <p>Flexbox is designed for one dimensional layout and Grid is for two-dimensional layout at the same time.</p>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ image -->
+        <div class="image">
+          <img src="images/faq.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- FAQ closed -->
+
+    <!-- Contact open -->
+    <section class="md:my-24 my-10">
+      <h1 class="text-4xl text-dark font-eb font-bold text-center">Contact with Us</h1>
+      <p class="text-base text-gray2 font-pop md:my-10 my-5 md:w-3/5 mx-auto text-center">If you have any issues, Let us know about it. We are ready to give you justice.</p>
+      <!-- Flex main -->
+      <div class="contact-section md:flex flex-row items-center md:gap-10">
+        <!-- Grid left main ( Address ) -->
+        <div class="address md:w-1/2 mx-auto text-center grid md:grid-cols-2 grid-cols-1 divide-x divide-y bg-gray-100">
+          <div class="part p-10">
+            <img class="mx-auto" src="images/location.png" alt="">
+            <h2 class="text-xl font-medium text-dark font-eb my-5">Location</h2>
+            <p class="text-base text-gray2 font-pop">A108 Adam Street, New York, NY 535022</p>
+          </div>
+          <div class="part p-10">
+            <img class="mx-auto" src="images/call.png" alt="">
+            <h2 class="text-xl font-medium text-dark font-eb my-5">Call Us</h2>
+            <p class="text-base text-gray2 font-pop">+81 750 911 811</p>
+          </div>
+          <div class="part p-10">
+            <img class="mx-auto" src="images/email.png" alt="">
+            <h2 class="text-xl font-medium text-dark font-eb my-5">Email Us</h2>
+            <p class="text-base text-gray2 font-pop">support@justice.com</p>
+          </div>
+          <div class="part p-10">
+            <img class="mx-auto" src="images/time.png" alt="">
+            <h2 class="text-xl font-medium text-dark font-eb my-5">Working Hour</h2>
+            <p class="text-base text-gray2 font-pop">9AM to 5PM</p>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="input-field md:w-1/2 mx-auto max-sm:mt-5">
+          <form action="">
+            <input class="block p-4 rounded-lg outline-none mb-5 bg-gray-100 w-full text-gray2" type="text" placeholder="Name">
+            <input class="block p-4 rounded-lg outline-none mb-5 bg-gray-100 w-full text-gray2" type="email" placeholder="Email">
+            <input class="block p-4 rounded-lg outline-none mb-5 bg-gray-100 w-full text-gray2" type="text" placeholder="Subject">
+            <textarea class="block p-4 rounded-lg outline-none mb-5 bg-gray-100 w-full text-gray2" name="" id="" cols="" rows="5" placeholder="Message..."></textarea>
+            <input class="block py-3 px-4 rounded-lg outline-none bg-primary hover:bg-primaryh w-full text-white" type="submit" value="Send Message">
+          </form>
+        </div>
+      </div>
+    <!-- Contact closed -->
+
+  </main>
+  <!-- Main closed -->
+
+  <!-- Footer open -->
+  <footer class="md:px-[10%] px-5 bg-[#111111] py-10">
+    <div class="main grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-x-10 max-sm:text-center">
+      <!-- Part 1 -->
+      <div class="part">
+        <img class="mb-5 max-sm:mx-auto" src="images/logo.png" alt="">
+        <p class="text-gray2">We are providing you a complete solution and justice that you deserve. Don't be worried, you will be safe and confident with us. If you are interested, you can do a free consultation with us.</p>
+      </div>
+      <!-- Part 2 -->
+      <div class="part">
+        <h2 class="text-xl font-eb text-white mb-5">Usefull links</h2>
+          <ul>
+            <li class="mb-2 text-gray2"><a href="#">Home</a></li>
+            <li class="mb-2 text-gray2"><a href="#">About</a></li>
+            <li class="mb-2 text-gray2"><a href="#">Cases</a></li>
+            <li class="mb-2 text-gray2"><a href="#">Blog</a></li>
+            <li class="mb-2 text-gray2"><a href="#">Contact</a></li>
+          </ul>
+      </div>
+      <!-- Part 3 -->
+      <div class="part">
+        <h2 class="text-xl font-eb text-white mb-5">Contact Info</h2>
+        <p class="mb-5 text-gray2"><img class="inline w-5 h-5" src="images/location.png" alt=""> 555 4th 5t NW, Washington DC 20530, United States</p>
+        <p class="mb-5 text-gray2"><img class="inline w-5 h-5" src="images/call.png" alt="">+81 750 911 811</p>
+        <p class="mb-5 text-gray2"><img class="inline w-5 h-5" src="images/email.png" alt=""> support@justice.com</p>
+      </div>
+      <!-- Part 4 -->
+      <div class="part">
+        <h2 class="text-xl font-eb text-white mb-5">Subscribe</h2>
+        <p class="mb-5 text-gray2">If you want to join our Newsletter, please subscribe here.</p>
+        <!-- Bottom input -->
+        <div class="form-control">
+          <div class="input-group w-auto max-sm:mx-auto">
+            <input type="email" placeholder="Enter email..." class="input outline-none bg-white" />
+            <button class="px-3 bg-primary hover:bg-primaryh">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white -rotate-45">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>              
+            </button>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="copuright mt-10">
+      <p class="text-gray2 text-center">Copyright - <script>document.write(new Date().getFullYear());</script> || Justice</p>
+    </div>
+  </footer>
+  <!-- Footer closed -->
+
+</body>
+</html>
